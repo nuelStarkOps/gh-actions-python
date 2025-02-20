@@ -1,6 +1,6 @@
 name: Python Addition Test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -13,10 +13,10 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install Dependencies
         run: pip install pytest
 
       - name: Run Tests
-        run: pytest test_app.py
+        run: pytest app.py
