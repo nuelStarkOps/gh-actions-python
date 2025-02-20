@@ -19,6 +19,4 @@ jobs:
         run: pip install pytest
 
       - name: Run Tests
-        run: |
-            cd
-            pytest app.py
+        run: pytest test_app.py
